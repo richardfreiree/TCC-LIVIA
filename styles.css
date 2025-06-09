@@ -1,0 +1,675 @@
+    * {
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        background-image: url(/assets/fundo\ site.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    .logo img {
+        width: 180px;
+        margin-left: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "main"
+            "article"
+            "sabor"
+            "about-agape"
+            "nossa-historia"
+            "novidades"
+            "forms-saibamais"
+            "footer";
+            grid-template-rows: 120px 500px 700px 300px 500px 550px 300px 600px;
+
+
+    }
+
+    header {
+        grid-area: header;
+        background-color: #351c0c;
+        width: 100%;
+        
+    }
+
+    .nav-items {
+        display: grid;
+        grid-template-areas: "logo others login carrinho";
+        grid-template-columns: 300px 1fr 1fr 120px;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .logo {
+        grid-area: logo;
+    }
+
+    .others {
+        grid-area: others;
+        text-align: center;
+    }
+
+    .login {
+        grid-area: login;
+        text-align: right;
+        width: 190px;
+        font-size: 1.3rem;;
+    }
+
+    .others input{
+        width: 280px;
+        border-radius: 20px;
+        height: 30px;
+        padding: 10px 20px;
+        
+    }
+
+    #lupa {
+        position: relative;
+        right: 35px;
+    }
+
+    .login ul {
+        display: flex;
+        gap: 10px;
+    }
+
+     li {
+        list-style: none;
+    }
+
+    .login li a{
+        color: #e0dbc4;
+        text-decoration: none;
+    }
+
+    .carrinho {
+        grid-area: carrinho;
+    }
+    .login i{
+        color: #eeba55  ;
+        margin-right: 10px;
+        font-size: 25px;
+
+
+    }
+
+    .carrinho i{
+        color: #eeba55;
+        font-size: 30px;
+    }
+
+    .login li{
+        color: #f7f6f5;
+    }
+
+    .login span {
+        color: #f7f6f5;
+    }
+
+.nav-items-down {
+    display: grid;
+    grid-template-areas: "links";
+    grid-template-columns:  repeat(auto-fit, minmax( 1fr));
+}
+
+.links-abaixo ul{
+    grid-area: links;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px 0;
+}
+
+.links-abaixo a {
+    color: #eeba55;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+#brands span{
+    margin-left: 10px;
+}
+ /* main */
+
+ main {
+    display: grid;
+    grid-template-areas: "chocolato logo"
+                        "chocolato frase";
+     grid-template-columns: 500px 700px;
+    grid-area: main;
+    position: relative;
+ }
+
+ .chocolate-main {
+    grid-area: chocolato;
+    position: absolute;
+    left: 0;
+
+ }
+
+ .logo-main {
+    grid-area: logo;
+    position: relative;
+ }
+
+ .logo-main img{
+    width: 150px;
+    position: absolute;
+    right: -65px;
+    top: 60px;
+ }
+
+ 
+
+.frase-main {
+    grid-area: frase;
+    position: absolute;
+}
+
+.frase-main img {
+    position: absolute;
+    bottom: -150px;
+    left: 0px;
+    margin: 0 auto;
+}
+
+.chocolate-main img {
+    width: 420px;
+    position: absolute;
+    top: -70px;
+}
+
+#chocolate-cima {
+    position: absolute;
+    top: 240px;
+    left: 120px;
+}
+
+#chocolate-baixo {
+    width: 430px;
+
+}
+
+/* ARTICLEEEEE */
+
+/* Reset básico */
+  
+  article {
+    grid-area: article;
+  }
+  
+.container-article {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem auto;
+  flex-wrap: wrp;
+  max-width: 1200px;
+}
+
+  /* Estilo base dos cards */
+  .filia, .agape, .eros {
+    background: #f6f6f6;
+    border-radius: 20px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .agape {
+    box-shadow:  0px 2px 5px 5px #eeba55;
+    height: 430px;
+    margin: 0 60px;
+  }
+
+  .filia, .eros {
+    box-shadow: 0px 2px 5px 5px #8b1d1a;
+    width: 300px;
+    height: 400px;
+    position: relative;
+  }
+  .filia:hover, .agape:hover, .eros:hover {
+    transform: scale(1.03);
+  }
+  
+  .filia img:first-child,
+  .eros img:first-child {
+    width: 200px;
+    margin-bottom: 1rem;
+    position: relative;
+    opacity: 0.6;
+  }
+  
+  .filia img:nth-child(2),
+  .eros img:nth-child(2) {
+    width: 100px;
+    position: absolute;
+    right: 100px;
+    opacity: 0.6;
+    top: 50px;
+  }
+  
+  .agape img {
+    width: 190px;
+  }
+  .agape img:hover {
+    transform: scale(1.20);
+    transition: 0.5s;
+  }
+  
+  .filia p,
+  .eros p,
+  .agape p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #6a5b4e;
+    line-height: 1.4;
+  }
+
+  .filia p, .eros p {
+    font-size: 0.8rem;
+  }
+  
+  /* "Em breve" imagem */
+  .soon {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 50%;
+    width: 300px;
+    opacity: 0.7;
+    background-color: #8c746b;
+    border-radius: 15px;
+    position: absolute;
+  }
+  
+  /* Card central Ágape com destaque */
+  .agape {
+    background: #fff6f2;
+    border: 2px solid #ffd6c5;
+    position: relative;
+  }
+  
+  .agape p strong {
+    font-size: 1.1rem;
+    color: #a3001c;
+  }
+  
+  /* Valor e botão */
+  .value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .value p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4d4d4d;
+  }
+  
+  .value i {
+    margin: 0 0.5rem;
+    cursor: pointer;
+    color: #a3001c;
+  }
+  
+  .carrinho-agape button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 52px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease;
+    position: absolute;
+    bottom: -3px;
+    width: 300px;
+    left: -2px;
+  }
+  
+
+  
+  .carrinho-agape button:hover {
+    background-color: #3e9442;
+  }
+  
+
+  /* SABORRRRRR */
+
+.div-img-nosso-sabor {
+  grid-area: sabor;
+  position: relative;
+}
+
+.div-img-nosso-sabor img {
+  width: 1000px;
+  position: absolute;
+  left: -400px;
+}
+
+/* ABOUT AGAPEEEE */
+.container-about-agape {
+  grid-area: about-agape;
+  grid-template-areas: "chocolateagape sobreagape"
+                        "chocolateagape sobreagape";
+  grid-template-columns:  500px 700px;
+  position: relative;
+}
+
+/* BOXXX AGAPEEEEE */
+.box-agape {
+  grid-area: chocolateagape;
+
+  position: absolute;
+}
+#chocolate-box-agape {
+  position: absolute;
+  top: -30px;
+  left: -470px;
+  width: 350px;
+  padding: 20px;
+  background-color: #8b1d1a;
+  z-index: 1300;
+  border: 10px solid #f5e8d7;
+  border-radius: 30px;
+}
+#logo-box-agape{
+  position: absolute;
+  bottom: -20px;
+  width: 200px;
+  right: 200px;
+  z-index: 2000;
+}
+
+/* BOX ABOUT AGAPEEEEEE */
+.box-about-agape{
+  grid-area: sobreagape;
+  position: absolute;
+  top: 0;
+  right: 200px;
+}
+
+.box-about-agape p{
+  width: 380px;
+  position: absolute;
+  top: 40px;
+  left: 120px;
+  z-index: 1000;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8c1d1a;
+}
+
+
+#fundo {
+  width: 600px;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  border-radius: 30px;
+}
+
+#logo-agape {
+  position: absolute;
+  top: 170px;
+  left: 500px;
+  width: 150px;
+}
+
+/* NOSSA HISTORIA */
+.container-nossa-historia{
+  display: grid;
+  grid-area: nossa-historia;
+  grid-template-areas: "texto-nossahistoria fotonossahistoria";
+  grid-template-columns: 500px 1fr;
+  position: relative;
+
+}
+ /* TEXTOOO NOSSA HISTORIA */
+.text-nossa-historia{
+  grid-area: texto-nossahistoria;
+  position: absolute;
+  left: 0px;
+}
+
+#logo-nossahistoria{
+  position: absolute;
+  width: 400px;
+  z-index: 1200;
+  top: -40px;
+  left: 40px;
+}
+
+#papelfundo{
+  position: absolute;
+}
+
+#texto-historia {
+  position: absolute; 
+  z-index: 100;
+  width: 400px;
+  top: 100px;
+  left: 40px;
+}
+
+/* FOTO NOSSA HISTORIAAA */
+.foto-nossa-historia {
+  grid-area: fotonossahistoria;
+}
+
+.container-novidades{
+  grid-area: novidades;
+}
+
+/* FORMS E SAIBA MAIS */
+
+.container-forms-saibamais {
+  grid-area: forms-saibamais;
+  display: grid;
+  grid-template-areas: "forms follow";
+  grid-template-columns: 500px 500px;
+  gap: 120px;
+  margin-top: 90px;
+}
+
+/* FORMS */
+.forms {
+  grid-area: forms;
+  background-color: #fef9f1;
+  padding: 20px;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  border: 10px solid #b48670;
+
+}
+
+.forms form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column; /* Deixa os inputs em coluna */
+gap: 10px;
+}
+
+.forms input {
+  border: none;
+  border-bottom: 2px solid  #b48670;k;
+  padding: 0px;
+  font-size: 16px;
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.forms p {
+
+  color: #b48670;
+  text-align: center;
+}
+
+
+#newslatter {
+  width: 400px;
+  position: absolute;
+  top: -75px;
+}
+
+#logo-forms {
+  width: 100px;
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+}
+
+/* SAIBA MAIS */
+.saiba-mais {
+  grid-area: follow;
+  background-color: #fef9f1;
+  padding: 20px;
+  position: relative;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  border: 10px solid #b48670;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nos-acompanhe {
+  width: 550px;
+  position: absolute;
+  top: -67px;
+  left: -30px;
+}
+
+.saiba-mais p {
+  color: #b48670;
+  font-weight: bold;
+}
+
+.saiba-mais img {
+  width: 70px;
+  margin-right: 20px;
+
+}
+
+.redesociais {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* footer */ 
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: "logos-footer nav-footer contato-footer";
+  grid-template-columns: 1fr 500px 400px;
+  margin-bottom: 30px;
+  gap: 10px;
+
+}
+
+footer *{
+  color: #f6b343;
+}
+
+
+
+/* logoooosss footerrrr */
+.logos-footer {
+  grid-area: logos-footer;
+  
+}
+
+.logos-img {
+  display: flex;
+}
+#logo-footer {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+#logosolitario-footer {
+  width: 400px;
+  margin-bottom: 30px;
+
+}
+
+.logos-footer p {
+  font-size: 10px;
+  text-align: center;
+  color: #f6b343;
+}
+/* navvvv footerrrr */
+.nav-footer {
+  grid-area: nav-footer;
+}
+
+footer h2 {
+  color: #f6b343;
+  margin-bottom: 20px;
+}
+
+.nav-footer li {
+  color: #f6b343;
+  margin-bottom: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-footer li a {
+  text-decoration: none;
+  color: #f6b343;
+}
+
+
+.nav-footer ul {
+  color: #f6b343;
+  text-decoration: none;
+}
+
+/* contato fooooooterrrrr */
+.contato-footer{
+  grid-area: contato-footer;
+}
+
+.contato-footer i{
+  margin-right: 20px;
+}
+
+.contato-footer p {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#loc {
+  width: 400px;
+}
+
+.redes-footer {
+  align-items: center;
+}
+.redes-footer img {
+  width: 30px;
+}
